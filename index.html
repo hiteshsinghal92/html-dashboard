@@ -3,236 +3,247 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
     <div class="container">
       <div class="sidebar">
-        <div class="logo">
-          <img src="logo.png" alt="Logo" height="90" width="200" />
-        </div>
-        <nav class="nav-menu">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+        <div class="sidebar-container">
+          <h1>Kahf tech</h1>
+          <ul class="nav-menu">
+            <li>
+              <a href="#"><i class="fas fa-columns"></i>Dashboard</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-chart-line"></i>Overview</a>
+            </li>
+            <li class="active">
+              <a href="#"><i class="fas fa-users"></i>Customers</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-tasks"></i>Projects</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-folder"></i>Project Files</a>
+            </li>
+            <li>
+              <div class="menu-item">
+                <i class="fas fa-envelope"></i>Messages
+                <span class="message-count">4</span>
+              </div>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-bell"></i>Notifications</a>
+            </li>
           </ul>
-        </nav>
+        </div>
+        <div class="sidebar-container">
+          <ul class="sidebar-bottom-nav-menu">
+            <li>
+              <a href="#"><i class="fas fa-flag"></i>Support</a>
+            </li>
+            <li>
+              <a href="#"><i class="fas fa-cog"></i>Settings</a>
+            </li>
+            <li class="profile">
+              <div class="profile-info">
+                  <img src="profile.jpeg" alt="Profile" class="profile-image" />
+                  <span class="profile-name">
+                      Tuhel Rana <br />
+                      tuhelrana@gmail.com
+                  </span>
+              </div>
+             
+          </li>
+          </ul>
+        </div>
       </div>
+
       <div class="main-content">
         <div class="top-bar">
-          <div class="name">Dashboard Name</div>
-          <div class="buttons">
-            <button class="btn1">Export CSV</button>
-            <button class="btn2">Invite Customer</button>
+          <div class="main-title">
+            <h2>Customers</h2>
+            <span>Find all platform customers here</span>
+          </div>
+          <div>
+            <button><i class="fas fa-file-csv"></i> Export CSV</button>
+            <button class="active">
+              <i class="fas fa-user-plus"></i> Invite Customer
+            </button>
           </div>
         </div>
-        <div class="widgets-section">
+        <div class="widget-section">
           <div class="widget">
-            <span>General Customer</span>
-            <h3>11,450</h3>
+            <div class="widget-info">General Customers</div>
+            <span class="widget-value"><b>11,450</b></span>
+            <div class="percentage primary">+2.15%</div>
           </div>
           <div class="widget">
-            <span>All Users</span>
-            <h3>812</h3>
+            <div class="widget-info">Admins</div>
+            <span class="widget-value"><b>812</b></span>
+            <div class="percentage danger">-0.34%</div>
           </div>
           <div class="widget">
-            <span>Customers</span>
-            <h3>83</h3>
+            <div class="widget-info">Creators</div>
+            <span class="widget-value"><b>83</b></span>
+            <div class="percentage primary">+1.15%</div>
           </div>
         </div>
-        <div class="table-section">
-          <div class="table-header">
-            <div>
-              <h2>All Customers(11,450)</h2>
-              <div class="tab">
-                <button class="tablinks active">View All</button>
-                <button class="tablinks">General</button>
-                <button class="tablinks">Admin</button>
-                <button class="tablinks">Creator</button>
-              </div>
+        <div class="table-header">
+          <h3>All Customers (12,345)</h3>
+          <div class="accordion-tabs">
+            <div class="tabs-options">
+              <button class="tab_active">View All</button>
+              <button>General</button>
+              <button>Admin</button>
+              <button>Creator</button>
             </div>
-            <div>
-              <input type="text" placeholder="Search..." />
+            <div class="search-container">
+              <input type="text" class="search-field" placeholder="Search..." />
+              <button class="filters-button">
+                <i class="fas fa-filter"></i> Filters
+              </button>
             </div>
           </div>
-
-          <div class="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th class="name">
-                    <input
-                      type="checkbox"
-                      class="checkbox"
-                      placeholder="names"
-                    />
-                    Name
-                  </th>
-                  <th>Role</th>
-                  <th>Projects</th>
-                  <th>Status</th>
-                  <th>Enrolled</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="name">
-                    <input
-                      type="checkbox"
-                      class="checkbox"
-                      placeholder="Hitesh"
-                    />
-                    <img
-                      src="profile.jpeg"
-                      alt="profile"
-                      class="profile-img"
-                      height="36"
-                      width="36"
-                    />
-                    <span class="username">Hitesh Gupta</span>
-                    <span class="tag">@hitesh</span>
-                  </td>
-
-                  <td><span class="admin">Admin</span></td>
-                  <td class="project">
-                    <div class="fraction">12<span class="small">/25</span></div>
-                  </td>
-                  <td>Active</td>
-                  <td>May 12, 2019</td>
-                </tr>
-                <tr>
-                  <td class="name">
-                    <input
-                      type="checkbox"
-                      class="checkbox"
-                      placeholder="Hitesh"
-                    />
-                    <img
-                      src="profile.jpeg"
-                      alt="profile"
-                      class="profile-img"
-                      height="36"
-                      width="36"
-                    />
-                    <span class="username">Hitesh Gupta</span>
-                    <span class="tag">@hitesh</span>
-                  </td>
-                  <td><span class="creator">Creator</span></td>
-                  <td class="project">
-                    <div class="fraction">12<span class="small">/25</span></div>
-                  </td>
-                  <td>Active</td>
-                  <td>Jan 12, 2019</td>
-                </tr>
-
-                <tr>
-                  <td class="name">
-                    <input
-                      type="checkbox"
-                      class="checkbox"
-                      placeholder="Hitesh"
-                    />
-                    <img
-                      src="profile.jpeg"
-                      alt="profile"
-                      class="profile-img"
-                      height="36"
-                      width="36"
-                    />
-                    <span class="username">Hitesh Gupta</span>
-                    <span class="tag">@hitesh</span>
-                  </td>
-
-                  <td><span class="admin">Admin</span></td>
-                  <td class="project">
-                    <div class="fraction">12<span class="small">/25</span></div>
-                  </td>
-                  <td>Active</td>
-                  <td>May 12, 2019</td>
-                </tr>
-
-                <tr>
-                  <td class="name">
-                    <input
-                      type="checkbox"
-                      class="checkbox"
-                      placeholder="Hitesh"
-                    />
-                    <img
-                      src="profile.jpeg"
-                      alt="profile"
-                      class="profile-img"
-                      height="36"
-                      width="36"
-                    />
-                    <span class="username">Hitesh Gupta</span>
-                    <span class="tag">@hitesh</span>
-                  </td>
-
-                  <td><span class="general">General</span></td>
-                  <td class="project">
-                    <div class="fraction">12<span class="small">/25</span></div>
-                  </td>
-                  <td>Active</td>
-                  <td>May 12, 2019</td>
-                </tr>
-                <tr>
-                  <td class="name">
-                    <input
-                      type="checkbox"
-                      class="checkbox"
-                      placeholder="Hitesh"
-                    />
-                    <img
-                      src="profile.jpeg"
-                      alt="profile"
-                      class="profile-img"
-                      height="36"
-                      width="36"
-                    />
-                    <span class="username">Hitesh Gupta</span>
-                    <span class="tag">@hitesh</span>
-                  </td>
-
-                  <td><span class="admin">Admin</span></td>
-                  <td class="project">
-                    <div class="fraction">12<span class="small">/25</span></div>
-                  </td>
-                  <td>Active</td>
-                  <td>May 12, 2019</td>
-                </tr>
-
-                <tr>
-                  <td class="name">
-                    <input
-                      type="checkbox"
-                      class="checkbox"
-                      placeholder="Hitesh"
-                    />
-                    <img
-                      src="profile.jpeg"
-                      alt="profile"
-                      class="profile-img"
-                      height="36"
-                      width="36"
-                    />
-                    <span class="username">Hitesh Gupta</span>
-                    <span class="tag">@hitesh</span>
-                  </td>
-                  <td><span class="creator">Creator</span></td>
-                  <td class="project">
-                    <div class="fraction">12<span class="small">/25</span></div>
-                  </td>
-                  <td>Active</td>
-                  <td>Jan 12, 2019</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
         </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th><input type="checkbox"  placeholder="checkbox"/>Name</th>
+              <th>Role</th>
+              <th class="projects">Projects</th>
+              <th>Status</th>
+              <th class="enrolled">Enrolled</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <input type="checkbox"  placeholder="checkbox"/>
+                  <img
+                    src="profile.jpeg"
+                    alt="User"
+                  />
+                  <span>Arkam McCoy</span>
+                </div>
+              </td>
+              <td><span class="badge badge-green">General</span></td>
+              <td class="projects">12<span class="grey-out">/25</span></td>
+              <td>Active</td>
+              <td class="enrolled">May 12, 2019</td>
+              <td><i class="fas fa-ellipsis-v" title="edit"></i></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <input type="checkbox" placeholder="checkbox"/>
+                  <img
+                    src="profile.jpeg"
+                    alt="User"
+                  />
+                  <span>Ethan Liam</span>
+                </div>
+              </td>
+              <td><span class="badge badge-yellow">Admin</span></td>
+              <td class="projects">18<span class="grey-out">/50</span></td>
+              <td>Active</td>
+              <td class="enrolled">August 7, 2017</td>
+              <td><i class="fas fa-ellipsis-v" title="edit"></i></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <input type="checkbox" placeholder="checkbox"/>
+                  <img
+                    src="profile.jpeg"
+                    alt="User"
+                  />
+                  <span>Olivia Liam</span>
+                </div>
+              </td>
+              <td><span class="badge badge-green">General</span></td>
+              <td class="projects">21<span class="grey-out">/25</span></td>
+              <td>Active</td>
+              <td class="enrolled">March 20, 2018</td>
+              <td><i class="fas fa-ellipsis-v" title="edit"></i></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <input type="checkbox" placeholder="checkbox" />
+                  <img
+                    src="profile.jpeg"
+                    alt="User"
+                  />
+                  <span>Noah Amelia</span>
+                </div>
+              </td>
+              <td><span class="badge badge-yellow">Admin</span></td>
+              <td class="projects">32<span class="grey-out">/50</span></td>
+              <td>Active</td>
+              <td class="enrolled">July 14, 2015</td>
+              <td><i class="fas fa-ellipsis-v" title="edit"></i></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <input type="checkbox" placeholder="checkbox"/>
+                  <img
+                    src="profile.jpeg"
+                    alt="User"
+                  />
+                  <span>Amelia Grace</span>
+                </div>
+              </td>
+              <td><span class="badge badge-red">Creator</span></td>
+              <td class="projects">6<span class="grey-out">/25</span></td>
+              <td>Active</td>
+              <td class="enrolled">June 23, 2015</td>
+              <td><i class="fas fa-ellipsis-v" title="edit"></i></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <input type="checkbox" placeholder="checkbox"/>
+                  <img
+                    src="profile.jpeg"
+                    alt="User"
+                  />
+                  <span>Lucas Grace</span>
+                </div>
+              </td>
+              <td><span class="badge badge-red">Creator</span></td>
+              <td class="projects">12<span class="grey-out">/25</span></td>
+              <td>Active</td>
+              <td class="enrolled">May 12, 2019</td>
+              <td><i class="fas fa-ellipsis-v" title="edit"></i></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="user-info">
+                  <input type="checkbox" placeholder="checkbox"/>
+                  <img
+                    src="profile.jpeg"
+                    alt="User"
+                  />
+                  <span>Ethan Liam</span>
+                </div>
+              </td>
+              <td><span class="badge badge-yellow">Admin</span></td>
+              <td class="projects">12<span class="grey-out">/25</span></td>
+              <td>Active</td>
+              <td class="enrolled">October 20, 2018</td>
+              <td><i class="fas fa-ellipsis-v" title="edit"></i></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </body>
